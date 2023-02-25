@@ -188,14 +188,6 @@ if ( ! function_exists('get_addons_class')) {
             default:
                 $namespace = '\\addons\\'.$name.'\\Plugin';
         }
-        switch ($type) {
-            case 'controller':
-                $namespace = "\\addons\\".$name."\\controller\\".$class;
-                break;
-            default:
-                $namespace = "\\addons\\".$name."\\".$class;
-        }
-
         return class_exists($namespace) ? $namespace : '';
     }
 }
